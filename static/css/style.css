@@ -1,0 +1,111 @@
+.rect-main{
+	width: 1000px;
+	max-width: 100%;
+	background-color: rgba(200, 200, 200, 0.6);
+	margin-top: 5%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tab {
+    overflow: hidden;
+    width:100%;
+    border: 1px solid #ccc;
+	background-color: rgba(244, 244, 244, 0.8);
+}
+
+.tab button {
+	width:33.33%;
+	background-color: inherit;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	transition: 0.3s;
+	font-size: 17px;
+}
+
+.tab button:hover {
+  	background-color: rgba(200, 200, 200, 0.8);
+}
+
+.tab button.active {
+  	background-color: rgba(150, 150, 150, 0.8);
+}
+
+.tabcontent {
+  	display: none;
+  	padding: 6px 12px;
+  	border: 1px solid #ccc;
+  	border-top: none;
+}
+
+/* 背景 */
+
+body {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-attachment: fixed;
+	background-size: cover;
+	height: 100vh;
+	transition: background 2s ease;
+}
+
+.bg1 {
+	background-image: url('/static/img/bg1.png');
+}
+
+.bg2 {
+	background-image: url('/static/img/bg2.png');
+}
+
+.bg3 {
+	background-image: url('/static/img/bg3.png');
+}
+
+/* 引导部分 */
+h1, p {
+	margin: 0;
+}
+
+.guide h1{
+	font-size: 40px;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin-top: 30px;
+}
+
+p.comments {
+	color: rgba(10, 10, 10);
+	padding-left: 20px;
+	font-style: italic;
+	background-color: rgba(255, 255, 255, 0.5);
+	margin-bottom: 10px;
+}
+
+/* 按钮部分 */
+
+.cpbtn {
+	background-color: rgba(220, 220, 220, 0.5);
+	color: rgba(255, 255, 255, 0.8);
+	padding: 10px 10px;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	outline: none;
+	font-size: 16px;
+	transition: background-color 0.5s;
+	width: max-content;
+}
+
+.cpbtn:hover {
+	background-color: rgba(220, 220, 220, 0.8);
+}
+
+.cpbtn:active {
+	background-color: rgba(220, 220, 220, 0.5);
+}
+.cptext {
+	display: none;
+}
