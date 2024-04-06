@@ -129,3 +129,13 @@ p.comments {
 	height: 20px;
 	margin-right: 10px;
 }
+
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: rgba(200, 200, 200, 0.3);
+	color: rgba(200, 200, 200, 0.9);
+	text-align: center;
+}
