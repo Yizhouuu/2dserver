@@ -48,7 +48,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: center center;
 	background-attachment: fixed;
-	background-size: cover;
 	height: 100vh;
 	transition: background 2s ease;
 }
@@ -108,4 +107,25 @@ p.comments {
 }
 .cptext {
 	display: none;
+}
+
+.btn-container {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.btn-nav {
+	display: flex;
+	align-items: center;
+	padding: 10px;
+	text-decoration: none;
+	color: black;
+	border: 1px solid black;
+	margin: 5px;
+}
+
+.img-btn {
+	width: 20px;
+	height: 20px;
+	margin-right: 10px;
 }
