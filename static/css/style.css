@@ -49,7 +49,7 @@ body {
 	background-position: center center;
 	background-attachment: fixed;
 	height: 100vh;
-	transition: background 2s ease;
+	transition: background 0.3s ease;
 }
 
 .bg1 {
