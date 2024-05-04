@@ -34,11 +34,11 @@ document.getElementById('cpbtn-ip').addEventListener('click', function() {
 
   navigator.clipboard.writeText(textToCopy).then(function() {
     var copyBtn = document.getElementById('cpbtn-ip');
-    copyBtn.innerText = '点击复制 IP：t.mcstory.cc:37954✅';
+    copyBtn.innerText = '点击复制 IP：2d.lian.moe✅';
     copyBtn.style.backgroundColor = 'rgba(40, 167, 69, 0.5)';
 
     setTimeout(function() {
-      copyBtn.innerText = '点击复制 IP：t.mcstory.cc:37954';
+      copyBtn.innerText = '点击复制 IP：2d.lian.moe';
       copyBtn.style.backgroundColor = 'rgba(220, 220, 220, 0.5)';
     }, 2000);
   });
