@@ -1,174 +1,90 @@
 <!DOCTYPE html>
-<html lang="zh">
+<html>
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>2D 服在线手册</title>
-	<link rel="stylesheet" href="./static/css/style.css">
-	<link rel="icon" href="./favicon.ico" type="image/x-icon">
-	<script src="static/js/tab.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>2D 服官网</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<style>
+body {
+  background-image: url("bg2.webp");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 0% 55%;
+}
+
+.sidenav {
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #010101CC;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+.sidenav a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 23px;
+  color: #818181;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.main {
+  margin-left: 160px;
+  font-size: 26px;
+  padding: 0px 10px;
+  background-color: #FFFFFF44;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
 </head>
-<body id="body">
-	<div class="rect-main">
-		<div class="tab">
-		  <button class="tablinks" onclick="openTab(event, 'workbench')" id="defaultOpen">快捷工作台</button>
-		  <button class="tablinks" onclick="openTab(event, 'guide')" id="newbie">引导</button>
-		  <button class="tablinks" onclick="openTab(event, 'reserved')">喵</button>
-		</div>
+<body>
 
-		<div id="workbench" class="tabcontent">
-	  		<h3>工作台</h3>
-			<div class="btn-container">
-				<button class="accordion">模组维基、教程</button>
-				<div class="panel">
-					<a href="https://zh.minecraft.wiki" class="btn-nav" target="_blank">
-						<img src="static/img/nav/mcwiki.png" alt="Image" class="img-btn">
-						<span class="txt-btn">Minecraft 原版维基百科</span>
-					</a>
-					<h3 style="width: 100%;margin-top: 0px">科技、机械类模组</h3>
-					<a href="https://wiki.luatos.com/luaGuide/introduction.html" class="btn-nav" target="_blank">
-						<img src="static/img/nav/lua.svg" alt="Image" class="img-btn">
-						<span class="txt-btn">Lua 教程：用于 CC 模组进行自动化制作</span>
-					</a>
-					<a href="https://www.mcmod.cn/class/1681.html" class="btn-nav" target="_blank">
-						<img src="static/img/nav/default.png" alt="Image" class="img-btn">
-						<span class="txt-btn">CC: Tweaked 百科：使用 Lua 脚本制作强大的自动化</span>
-					</a>
-					</a>
-					<a href="https://www.mcmod.cn/class/2021.html" class="btn-nav" target="_blank">
-						<img src="static/img/nav/default.png" alt="Image" class="img-btn">
-						<span class="txt-btn">机械动力百科：最浪漫的科技模组</span>
-					</a>
-					<a href="https://www.mcmod.cn/class/2752.html" class="btn-nav" target="_blank">
-						<img src="static/img/nav/default.png" alt="Image" class="img-btn">
-						<span class="txt-btn">[IR]工业革命百科：新兴的科技模组</span>
-					</a>
-					<a href="https://www.mcmod.cn/class/2365.html" class="btn-nav" target="_blank">
-						<img src="static/img/nav/default.png" alt="Image" class="img-btn">
-						<span class="txt-btn">Powah!百科：专注于产能的科技模组</span>
-					</a>
-					<a href="https://www.mcmod.cn/class/3472.html" class="btn-nav" target="_blank">
-						<img src="static/img/nav/default.png" alt="Image" class="img-btn">
-						<span class="txt-btn">[MI]现代工业化百科：<del style="font-style: italic;color: #222">烧开水</del>科技模组</span>
-					</a>
-					<a href="https://www.mcmod.cn/class/558.html" class="btn-nav" target="_blank">
-						<img src="static/img/nav/default.png" alt="Image" class="img-btn">
-						<span class="txt-btn">[TR]科技复兴百科： <del style="font-style: italic;color: #222">电力UU</del>生产科技</span>
-					</a>
-					<h3 style="width: 100%;margin-top: 0px">魔法类模组</h3>
-					<a href="https://www.mcmod.cn/class/1127.html" class="btn-nav" target="_blank">
-						<img src="static/img/nav/default.png" alt="Image" class="img-btn">
-						<span class="txt-btn">巫师之路 (Bewitchment) 百科：<del style="font-style: italic;color: #222">有书也看不懂的</del>魔法</span>
-					</a>
-					<a href="" class="btn-nav" target="_blank">
-						<img src="static/img/nav/default.png" alt="Image" class="img-btn">
-						<span class="txt-btn">[BOT]植物魔法百科：老牌<del style="font-style: italic;color: #222">科技</del>魔法模组</span>
-					</a>
-					<a href="https://www.mcmod.cn/class/8893.html" class="btn-nav" target="_blank">
-						<img src="static/img/nav/default.png" alt="Image" class="img-btn">
-						<span class="txt-btn">魔法师 (Wizards) 百科：花里胡哨的魔法模组</span>
-					</a>
+<div class="sidenav">
+  <a href="#overview">介绍</a>
+  <a href="#download">客户端下载</a>
+  <a href="#about">关于</a>
+</div>
 
-					<h3 style="width: 100%;margin-top: 0px">农业类模组</h3>
-					<a href="https://www.mcmod.cn/class/2820.html" class="btn-nav" target="_blank">
-						<img src="static/img/nav/default.png" alt="Image" class="img-btn">
-						<span class="txt-btn">农夫乐事 Farmer's Delight: 高版本经典的农业模组</span>
-					</a>
-					<a href="https://www.mcmod.cn/class/13710.html" class="btn-nav" target="_blank">
-						<img src="static/img/nav/default.png" alt="Image" class="img-btn">
-						<span class="txt-btn">盛节精酿 Lets Do Brewery：Lets Do 系列的酿酒模组</span>
-					</a>
-					<a href="https://www.mcmod.cn/class/13099.html" class="btn-nav" target="_blank">
-						<img src="static/img/nav/default.png" alt="Image" class="img-btn">
-						<span class="txt-btn">煨茶酝露 HerbalBrews: Lets Do 系列的沏茶模组</span>
-					</a>
-					<a href="https://www.mcmod.cn/class/8181.html" class="btn-nav" target="_blank">
-						<img src="static/img/nav/default.png" alt="Image" class="img-btn">
-						<span class="txt-btn">葡园酒香Let's do Wine / Vinery: Lets Do 系列的葡萄相关模组</span>
-					</a>
+<div class="main">
+  <p id="overview">
+    <br>欢迎游玩 2D 服，官网正在重写中，原官网（在线手册）的功能正在逐步转移至客户端主页和 QQ 群机器人~
+  </p>
+
+  <p>
+    服务器开服自 2023 年冬季，中间换过了三批玩家，虽然平时玩家较少，但也会尽力保证服务器的长期运营和友好的社区环境。我们是一个包容友爱的社区，在互相尊重的基础上，我们欢迎所有玩家~
+  </p>
+
+  <p>
+    详细的服务器介绍请查看 MC 百科找服玩页面：<a href="https://play.mcmod.cn/sv20187784.html">2D 服（长期周目）</a><br>
+    您可以加入我们的 QQ 交流群来和我们一起聊天和使用机器人功能：<a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=e20I9fLaD_IsW1lYqi2dcaI3d3PEw3PO&authKey=5qXX42Os0eIFVbUFQ8o5nmoOivPFHHjRB%2BACze7cKIWkQByIbLzWXSYER2PTC3rf&noverify=0&group_code=137422592">137422592</a>
+  </p>
 
 
-					<h3 style="width: 100%;margin-top: 0px">功能性模组</h3>
-					<a href="https://www.mcmod.cn/class/1732.html" class="btn-nav" target="_blank">
-						<img src="static/img/nav/default.png" alt="Image" class="img-btn">
-						<span class="txt-btn">旅行者背包百科：强大的背包模组</span>
-					</a>
-					<a href="https://www.mcmod.cn/class/5401.html" class="btn-nav" target="_blank">
-						<img src="static/img/nav/default.png" alt="Image" class="img-btn">
-						<span class="txt-btn">伊卡洛斯之翼百科</span>
-					</a>
-				</div>
-				<button class="accordion">建筑灵感</button>
-				<div class="panel">
-					<p style="width: 100%">Twitter 的 #Minecraft建築コミュ 标签上有许多好看的建筑推文，还有 Pinterest 也可用于收集灵感</p>
-					<a href="https://twitter.com/hashtag/Minecraft%E5%BB%BA%E7%AF%89%E3%82%B3%E3%83%9F%E3%83%A5?src=hashtag_click" class="btn-nav" target="_blank">
-						<img src="static/img/nav/default.png" alt="Image" class="img-btn">
-						<span class="txt-btn">#Minecraft建築コミュ 标签</span>
-					</a>
-					<a href="https://www.pinterest.com" class="btn-nav" target="_blank">
-						<img src="static/img/nav/default.png" alt="Image" class="img-btn">
-						<span class="txt-btn">Pinterest: 分享和发现灵感的地方</span>
-					</a>
-				</div>
-				<!--
-				<a href="" class="btn-nav" target="_blank">
-					<img src="static/img/nav/default.png" alt="Image" class="img-btn">
-					<span class="txt-btn"></span>
-				</a>
+  <h2 id="download">客户端下载与更新</h2>
+  <p>点击即可直接下载 2D 服客户端：<a href="https://vip.123pan.cn/1812378450/2ds/2D%20%E6%9C%8D%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F.exe">点击下载</a></p>
 
-				-->
-			</div>
+  <p>整合包内置了更新系统，因此后续更新不需要再重复下载，每次启动游戏的时候就会自动更新了。请记得一定要使用内置的 PCL2 启动器进行启动（会自动创建开始菜单和桌面快捷方式），否则无法使用主页功能，且自动更新会失效</p>
 
+  <p>如果您是 2024年 4月 4日 后、2024年 8 月 8 日前下载的客户端，您可以下载客户端升级程序，以直接在原客户端的基础上进行升级。更久远的客户端就没办法了😂：<a href="https://vip.123pan.cn/1812378450/2ds/2D%20%E6%9C%8D%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%8D%87%E7%BA%A7%E7%A8%8B%E5%BA%8F.exe"
+    >点击下载升级程序</a></p>
+  
+  <h2 id="about">关于</h2>
+  <p>如果您遇到了任何问题，请直接通过 QQ 群或其他途径联系我们，我们很乐意提供帮助！您也可以直接在服务器里发讯息，QQ 群和服务器讯息和互通的，只是不一定会有人能及时回复，可能等回复时您已经下线了;;~~</p>
 
-		</div>
-
-		<div id="guide" class="tabcontent">
-			<div class="guide">
-				<h1>下载整合包</h1>
-				<p class="comments">服务器定制的整合包，原版 Prominence II [RPG] 整合包无法直接进入服务器</p>
-				<p><a href="https://vip.123pan.cn/1812378450/2ds/2D%20%E6%9C%8D%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%AE%89%E8%A3%85%E7%A8%8B%E5%BA%8F.exe">点击下载 2D 服客户端安装包</a> </p>
-				<p style="color: red;font-weight: bold">注意：因为 2D 服配备了自动更新，因此无法提供通用格式的整合包，请见谅...</p>
-
-				<h1>服务器地址</h1>
-				<p><button class="cpbtn" id="cpbtn-ip">点击复制 IP：2d.lian.moe</button>
-				<p class="cptext" id="cptext-ip">2d.lian.moe</p>
-
-				<h1>可选资源</h1>
-				<p class="comments">非必须安装的模组 / 光影 / 资源包，可按需自行安装</p>
-				<a href="https://vip.123pan.cn/1812378450/link/effortless-fabric-1.8.1-1.20.1.jar">轻松建造 / Effortless</a>
-				<p>轻松建造是一个非常方便的建筑模组，可以以各种形状大范围建造、破坏</p>
-
-				<h1>更新整合包</h1>
-				<p class="comments">Prominence II 整合包经常会更新，本服也会周期性的跟进版本和添加其他客制化内容</p>
-				<p>复制链接（步骤四中链接）并按照下图操作即可</p>
-				<p><button class="cpbtn" id="cpbtn-update">点击复制整合包链接</button>
-					<a href="https://vip.123pan.cn/1812378450/link/%E5%88%A0%E9%99%A4%E6%97%A7%E6%A8%A1%E7%BB%84%E6%96%87%E4%BB%B6.bat">如果您发现旧模组在更新的时候没有自动删除，请下载该脚本并放在 mods 文件夹中运行</a>
-				<p class="cptext" id="cptext-update">https://vip.123pan.cn/1812378450/link/2ds_pack.zip</p>
-				<img style="max-width: 100%" src="/static/img/update.png" alt="如果你看到了这段文字，代表图片加载不出来，请尝试用手机流量访问，且请反馈给壹粥粥粥">
-
-				<h1>我们的平台</h1>
-				<a href="http://qm.qq.com/cgi-bin/qm/qr?_wv=1027&k=1hDbwJ9DZW3YNx18IFSvQxqEVXgJNdPS&authKey=GUn2OGjrDbuol7LKujeF79%2FeIxwT2U2s%2B5DOdkzwLBc0br3nQbzr1uAXSSReAuI%2F&noverify=0&group_code=137422592">点击加入 QQ 群：137422592</a><br>
-				<a href="https://play.mcmod.cn/sv20187784.html">MC 百科找服玩条目</a>
-			</div>
-		</div>
-
-		<div id="reserved" class="tabcontent">
-		  	<h3>备用界面</h3>
-		  	<p>
-				Prominence II [RPG] 整合包由 Luna Pixels Studios 制作，由 2D服 二次修改<br>
-				部分翻译来自 柠娜、CFPA、社区本地化、壹粥粥粥<br>
-				服务器内部分贴图、图标由 Nitbe 制作<br>
-				在线手册由壹粥粥粥、Nx10 和其他玩家一同编写<br>
-				自豪的使用物语云服务器运行游戏服务器、CloudFlare Pages 运行在线手册、Github 运行流水线、联萌社区提供域名<br>
-			</p><br>
-			<a href="./updatelog.html">更新日志</a>
-		</div>
-	</div>
-
-	<footer>
-		<p>Made by 2Dserver with ❤ | © 2024</p>
-	</footer>
-
-<script src="static/js/tab.js"></script>
+</div>
+   
 </body>
-</html>
+</html> 
